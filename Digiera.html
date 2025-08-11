@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing - Digital Era</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #fff7ed, #e3f3ff);
+      color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background: white;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .btn {
+      background: #000;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 50px;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .hero-graphics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .hero-graphics img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .doodle {
+      position: absolute;
+      z-index: -1;
+    }
+
+    /* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  gap: 60px;
+  padding: 50px 20px 30px;
+  background: linear-gradient(to right, #eaf7ff, #fff9f2);
+}
+.stat-item h2 {
+  font-size: 40px;
+  margin: 0;
+  color: #000;
+}
+.stat-item p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* SERVICES */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+.service-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+  max-width: 280px;
+  text-align: left;
+}
+.icon {
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  color: white;
+}
+.icon.blue { background: #b8e4f8; color: #0a6aa8; }
+.icon.pink { background: #ffd5dc; color: #d6336c; }
+.icon.orange { background: #ffe5b4; color: #ff6600; }
+.service-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+.service-card p {
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* LOGOS */
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+.logos img {
+  height: 32px;
+  object-fit: contain;
+}
+
+/* CASE STUDIES SECTION */
+.case-studies {
+  display: flex;
+  padding: 60px 40px;
+  background: #111;
+  color: #fff;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.case-left {
+  max-width: 400px;
+}
+.case-left h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+.tag {
+  background: #333;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.tag.active {
+  background: #fff;
+  color: #111;
+}
+.case-left p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.case-left button {
+  padding: 10px 18px;
+  border: none;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.case-right {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.case-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.case-item img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.caption {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #fff;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* BANNER IMAGE SECTION */
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c8ebf7;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.banner-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0 20px;
+}
+.banner-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1.2;
+  background: linear-gradient(90deg, white, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.banner-image img {
+  width: 280px;
+  height: auto;
+  z-index: 10;
+  border-radius: 40px;
+  
+
+
+}
+
+body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fefaf6, #e9f4fd);
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px 80px;
+    }
+
+    .left-images {
+      position: relative;
+      width: 50%;
+    }
+
+    .left-images img.bg {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .left-images img.overlay {
+      position: absolute;
+      top: 20%;
+      left: 40%;
+      width: 40%;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .right-content {
+      width: 40%;
+    }
+
+    .right-content h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .right-content p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .right-content button {
+      padding: 10px 25px;
+      border: 1px solid black;
+      background: transparent;
+      cursor: pointer;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .left-images,
+      .right-content {
+        width: 100%;
+      }
+
+      .left-images img.overlay {
+        top: 50%;
+        left: 50%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+      }
+
+      .right-content {
+        text-align: center;
+        margin-top: 30px;
+      }
+      body, html {
+      height: 100%;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+
+
+    body {
+  background-color: #fff;
+  padding: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.icon-circle {
+  background: #fff3db;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.icon-circle img {
+  width: 50px;
+}
+
+.left-section h1 {
+  font-size: 2rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.support-text {
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.phone-number {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.right-section {
+  flex: 1;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+button {
+  width: 150px;
+  padding: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+
+body {
+  background-color: #fff;
+}
+
+.newsletter-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #fff7e6, #e7f7ff);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.newsletter-form input {
+  flex: 1;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+}
+
+.newsletter-form button {
+  padding: 0 25px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #333;
+}
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="./Logo.svg">
+      DIGITAL ERA
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Pages</a>
+      <a href="#">Mega Menu</a>
+      <a href="#">Blog</a>
+      <a href="#">Shop</a>
+      <a href="#">Contacts</a>
+      <a class="btn" href="#">GET IN TOUCH</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Digital marketing</h1>
+      <p>
+        Extract real business value from social media. Ensuring the best return on investment for your bespoke SEO campaign requirement.
+      </p>
+      <a class="btn" href="#">CONTACT TODAY</a>
+    </div>
+
+    <div class="hero-graphics">
+      <img src="./agency_img1.jpg.svg" alt="Yellow Girl" />
+      <img src="./agency_img2.jpg.svg" alt="Pink Guy" />
+      <img src="./men img.svg" alt="Blue Girl" />
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat-item">
+      <h2>+150%</h2>
+      <p>Conversion Rate Increased</p>
+    </div>
+    <div class="stat-item">
+      <h2>+87K</h2>
+      <p>Happy Ewebot Customers</p>
+    </div>
+    <div class="stat-item">
+      <h2>+20M</h2>
+      <p>Amount of Investments in 2025</p>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="service-card">
+      <div class="icon blue">🔍</div>
+      <h3>Search Engine Optimization</h3>
+      <p>Maecenas elementum sapien in metus placerat finibus.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon pink">👍</div>
+      <h3>Social Media Strategy</h3>
+      <p>Maecenas elementum sapien in metus placerat finibus.</p>
+    </div>
+    <div class="service-card">
+      <div class="icon orange">🔗</div>
+      <h3>Reporting & Analysis</h3>
+      <p>Maecenas elementum sapien in metus placerat finibus.</p>
+    </div>
+  </section>
+
+  <section class="logos">
+    <img src="./network icon.png" alt="Network">
+    <img src="./product.png" alt="Product">
+    <img src="./Vertigo.png" alt="Vertigo">
+    <img src="./proline.png" alt="ProLine">
+    <img src="./Minty.png" alt="Minty">
+  </section>
+
+  <section class="case-studies">
+    <div class="case-left">
+      <h2>Our Case Studies</h2>
+      <div class="tags">
+        <span class="tag active">All</span>
+        <span class="tag">Marketing</span>
+        <span class="tag">Branding</span>
+        <span class="tag">SEO</span>
+        <span class="tag">Web</span>
+      </div>
+      <p>Ad nec unum copiosae. Sea ex everti labores, ad option iuvaret qui. Id quo esse nusquam.</p>
+      <button>View All Cases</button>
+    </div>
+    <div class="case-right">
+      <div class="case-item">
+        <img src="./1st img.jpg" alt="Agency Optimization" />
+        <div class="caption">Agency Optimization</div>
+      </div>
+      <div class="case-item">
+        <img src="./Laptop 2 img.jpg" alt="Online Management" />
+        <div class="caption">Online Management</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="banner">
+    <div class="banner-text">
+      <h1> <br><br><br><br><br> Marketing Search Engine Content<br/>Social Media Optimization Strategy</h1>
+    </div>
+    <div class="banner-image">
+      <img src="./6294105990982911568.jpg" alt="Smiling man" />
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="left-images">
+      <img src="./agency 1st.jpg" alt="Presentation" class="bg" />
+      <img src="./gncy 2.jpg" alt="Woman" class="overlay" />
+    </div>
+    <div class="right-content">
+      <h1>Outstanding Digital Experience</h1>
+      <p>
+        Ad nec unum copiosae. Sea ex everti labores, ad option iuvaret qui.
+        Id quo esse nusquam. Eam iriure diceret oporteat.
+      </p>
+      <button>DISCOVER MORE</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="left-section">
+      <div class="icon-circle">
+        <img src="paper plance.png" alt="Paper Plane" />
+      </div>
+      <h1>Want to <strong>WOW</strong> Your Customers</h1>
+      <p class="support-text">Call us for fast support to this number.</p>
+      <p class="phone-number">800 2563 123</p>
+    </div>
+    <div class="right-section">
+      <form>
+        <div class="form-row">
+          <input type="text" placeholder="Your Name*" required />
+          <input type="email" placeholder="Email*" required />
+        </div>
+        <div class="form-row">
+          <input type="text" placeholder="Phone" />
+          <input type="text" placeholder="Website*" required />
+        </div>
+        <textarea placeholder="Message" rows="4"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <section class="newsletter-section">
+    <div class="content">
+      <h1>Say Hello to Ewebot!</h1>
+      <p>Sing up for Newsletter and receive 40%<br> discount on first project</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Email Address" required />
+        <button type="submit">SIGN UP</button>
+      </form>
+    </div>
+  </section>
+ 
+</body>
+
+</html>
