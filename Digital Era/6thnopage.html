@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Newsletter Signup</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #fff;
+}
+
+.newsletter-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #fff7e6, #e7f7ff);
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.newsletter-form input {
+  flex: 1;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 30px 0 0 30px;
+}
+
+.newsletter-form button {
+  padding: 0 25px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 30px 30px 0;
+  transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #333;
+}
+
+
+  </style>
+
+</head>
+<body>
+  <section class="newsletter-section">
+    <div class="content">
+      <h1>Say Hello to Ewebot!</h1>
+      <p>Sing up for Newsletter and receive 40%<br> discount on first project</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Email Address" required />
+        <button type="submit">SIGN UP</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
